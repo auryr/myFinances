@@ -4,7 +4,7 @@ class CreateTransactions < ActiveRecord::Migration[5.1]
 
       t.text :note
       t.string :date ,:limit => 10
-      t.decimal :amount,  scale: 2
+      t.decimal :amount, precision:12,  scale: 2
       t.string :receipt  ,:limit => 20
       t.belongs_to :category, index: true
 
